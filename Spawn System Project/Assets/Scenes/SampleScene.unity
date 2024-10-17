@@ -2567,6 +2567,10 @@ MonoBehaviour:
   Engine: 1
   Passengers: 2
   Cargo: 1
+  EngineToggle: {fileID: 0}
+  CargoToggle: {fileID: 0}
+  WheelAmount: {fileID: 0}
+  PeopleAmount: {fileID: 0}
 --- !u!4 &1595024328
 Transform:
   m_ObjectHideFlags: 0

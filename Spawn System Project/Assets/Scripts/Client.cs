@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Client : MonoBehaviour
 {
@@ -8,6 +9,12 @@ public class Client : MonoBehaviour
     public bool Engine;
     public int Passengers;
     public bool Cargo;
+
+    public Toggle EngineToggle;
+    public Toggle CargoToggle;
+
+    public InputField WheelAmount;
+    public InputField PeopleAmount;
 
     void Start()
     {
