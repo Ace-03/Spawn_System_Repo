@@ -2465,15 +2465,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53102c24cd2f03c4f8047bc7c0fefb20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NumberOfWheels: 4
+  NumberOfWheels: 0
   Engine: 1
-  Passengers: 2
+  Passengers: 0
   Cargo: 1
   Output: {fileID: 1587872645}
   EngineToggle: {fileID: 699421765}
   CargoToggle: {fileID: 220949165}
-  WheelAmount: {fileID: 0}
-  PeopleAmount: {fileID: 0}
+  WheelAmount: {fileID: 2049619601}
+  PeopleAmount: {fileID: 1759589810}
 --- !u!4 &1595024328
 Transform:
   m_ObjectHideFlags: 0

@@ -24,8 +24,6 @@ public class Client : MonoBehaviour
 
     void Start()
     {
-        EngineToggle = GetComponent<Toggle>();
-
         NumberOfWheels = Mathf.Max(NumberOfWheels, 1);
         Passengers = Mathf.Max(Passengers, 1);
         Engine = Cargo;
@@ -50,7 +48,7 @@ public class Client : MonoBehaviour
         Passengers = Mathf.Max(Passengers, 1);
         Engine = Cargo;
 
-        //EngineToggle.isOn = Cargo;
+        EngineToggle.isOn = Cargo;
 
         VehicleRequirements requirements = new VehicleRequirements();
         requirements.NumberOfWheels = NumberOfWheels;
@@ -77,20 +75,6 @@ public class Client : MonoBehaviour
         else
             Cargo = false;
     }
-
-    /*
-    public void WheelNumber(string amount)
-    {
-        int value = int.Parse(amount);
-        NumberOfWheels = value;
-    }
-
-    public void PeopleNumber(string amount)
-    {
-        int value = int.Parse(amount);
-        Passengers = value;
-    }
-    */
 
     private static IVehicle GetVehicle(VehicleRequirements requirements)
     {
