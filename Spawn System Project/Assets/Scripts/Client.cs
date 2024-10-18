@@ -24,8 +24,7 @@ public class Client : MonoBehaviour
 
     void Start()
     {
-        //WheelNum = int.Parse(WheelAmount.text);
-        //PeopleNum = int.Parse(PeopleAmount.text);
+
         EngineToggle = GetComponent<Toggle>();
 
         NumberOfWheels = Mathf.Max(NumberOfWheels, 1);
@@ -45,17 +44,19 @@ public class Client : MonoBehaviour
 
     public void Create()
     {
-        NumberOfWheels = Mathf.Max(WheelNum, 1);
-        Passengers = Mathf.Max(WheelNum, 1);
+        //WheelNum = int.Parse(WheelAmount.text);
+        //PeopleNum = int.Parse(PeopleAmount.text);
+
+        NumberOfWheels = Mathf.Max(NumberOfWheels, 1);
+        Passengers = Mathf.Max(PeopleNum, 1);
         Engine = Cargo;
-        EngineToggle.isOn = Cargo;
+
+        //EngineToggle.isOn = Cargo;
 
         VehicleRequirements requirements = new VehicleRequirements();
         requirements.NumberOfWheels = NumberOfWheels;
         requirements.Engine = Engine;
         requirements.Passengers = Passengers;
-
-        
 
         IVehicle v = GetVehicle(requirements);
         Output.text = v.ToString();
@@ -76,8 +77,18 @@ public class Client : MonoBehaviour
             Cargo = true;
         else
             Cargo = false;
+    }
 
-        
+    public void WheelNumber(string amount)
+    {
+        int value = int.Parse(amount);
+        NumberOfWheels = value;
+    }
+
+    public void PeopleNumber(string amount)
+    {
+        int value = int.Parse(amount);
+        Passengers = value;
     }
 
     private static IVehicle GetVehicle(VehicleRequirements requirements)
